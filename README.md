@@ -17,6 +17,16 @@ I've only tested it in Firefox and Chrome, but it should work in other browsers 
 2. Go to [Wocabee website](https://wocabee.app/).
 3. Click on the extension, copy and paste the code from [code.js file](code.js) into the window, and then reload the page.
 
+### Python script
+
+1. Download wocabee_bot.py
+2. Download python if you don't have it
+3. Install libraries in administrator terminal (windows):
+      pip install pywin32
+      pip install keyboard
+      pip install pyautogui
+      pip install opencv-python
+
 ## Usage
 
 When you go to [Wocabee App](https://wocabee.app/app/), and select some package to do, there should be (hopefully) some buttons at the top.
@@ -28,3 +38,5 @@ When you go to [Wocabee App](https://wocabee.app/app/), and select some package 
 - **Log Table** - log a simple table with the translations to the console
 - **Log JSON** - log the translations to the console, but in a json format
 - **Hide** - hide all of the buttons (they will reappear on reload)
+
+For the python file, you just need to run the script and [Wocabee App](https://wocabee.app/app/). Should work automaticaly, if you have completed all the steps above.
