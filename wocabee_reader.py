@@ -5,22 +5,12 @@ import time
 import keyboard
 import win32api, win32con
 import tkinter as tk
-#import pytesseract as pts
-#import cv2
-#from PIL import Image
-
-#pts.tesseract_cmd = "C:\Users\janza\OneDrive\Dokumenty\Visual Studio Code\tesseract"
 
 root = tk.Tk()
 
 canvas1 = tk.Canvas(root, width = 200, height = 100)
 canvas1.pack()
 label1 = tk.Label(root, text = "Tohle bohužel nedám, sorka.")
-
-print(pyautogui.pixel(1100, 400))
-print(pyautogui.pixel(1100, 540))
-print(pyautogui.pixel(1100, 610))
-print(pyautogui.pixel(1100, 670))
 
 def click(x, y):
     win32api.SetCursorPos((x, y))
@@ -80,18 +70,16 @@ def picturePicker():
 
 while keyboard.is_pressed('q') == False:
     while pyautogui.pixel(1400, 270)[0]>100:
-        #pickOne function
         if pyautogui.pixel(1100, 400)[0] == 40 and pyautogui.pixel(1100, 610)[0] == 0 and pyautogui.pixel(1100, 670)[0] == 0:
             pickOne()
-        #pairs function
         elif pyautogui.pixel(1100, 400)[0] == 40 and pyautogui.pixel(1100, 460)[0] == 40 and pyautogui.pixel(1100, 540)[0] == 40 and pyautogui.pixel(1100, 620)[0] == 0 and pyautogui.pixel(1100, 700)[0] == 0 and pyautogui.pixel(1100, 770)[0] == 0:
             pairs()
-        #listenAndWrite function
         elif pyautogui.pixel(940, 440)[0] == 255 and pyautogui.pixel(1100, 520)[0] == 255 and pyautogui.pixel(1100, 750)[0] == 19:
             listenAndWrite()
-        #translate function
         elif pyautogui.pixel(1100, 400)[0] == 40 and pyautogui.pixel(940, 450)[0] == 255 and pyautogui.pixel(1100, 530)[0] == 255:
             translate()
-        elif pyautogui.pixel(1100, 690)[0] == 250 and pyautogui.pixel(1100, 760)[0] == 2:
-            picturePicker()
+        elif pyautogui.pixel(1100, 690)[0] == 255 and pyautogui.pixel(1100, 760)[0] == 2:
+            pictureReader()
+        elif pyautogui.pixel(1100, 540)[0] == 255 and pyautogui.pixel(1100, 740)[0] == 19:
+            completeWord()
 root.mainloop()
