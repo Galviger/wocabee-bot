@@ -1,3 +1,5 @@
+# Unfortunately, Wocabee got us, this doesn't work anymore.
+
 # Wocabee Bot
 
 I've only tested it in Firefox and Chrome, but it should work in other browsers with their corresponding extensions.
